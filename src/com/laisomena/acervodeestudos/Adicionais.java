@@ -1,3 +1,5 @@
+package com.laisomena.acervodeestudos;
+
 public class Adicionais {
     private String nome;
     private Assunto assunto;

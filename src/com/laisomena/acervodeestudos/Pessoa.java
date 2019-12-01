@@ -1,12 +1,15 @@
+package com.laisomena.acervodeestudos;
+
 public abstract class Pessoa {
     private String nome;
-    private String email;
+    protected String email;
     private String cpf;
 
     public String getNome() {
         return nome;
     }
-    public void setNome(String nome){
+
+    public void setNome(String nome) {
         this.nome = nome;
     }
 

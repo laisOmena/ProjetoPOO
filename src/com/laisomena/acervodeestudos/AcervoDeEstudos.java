@@ -1,3 +1,5 @@
+package com.laisomena.acervodeestudos;
+
 public class AcervoDeEstudos {
     private String nome;
     private Usuario usuario;

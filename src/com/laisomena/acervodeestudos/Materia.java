@@ -1,6 +1,8 @@
+package com.laisomena.acervodeestudos;
+
 public class Materia {
     private String nome;
-    private  AcervoDeEstudos acervo;
+    private AcervoDeEstudos acervo;
 
     public String getNome() {
         return nome;
