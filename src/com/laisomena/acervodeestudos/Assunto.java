@@ -1,15 +1,23 @@
 package com.laisomena.acervodeestudos;
 
 public class Assunto {
-    private String nome;
+    private String titulo;
     private Materia materia;
 
-    public String getNome() {
-        return nome;
+    public Assunto (String titulo, Materia materia) {
+        this.titulo = titulo;
+        this.setMateria(materia);
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public Assunto () {
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setNome(String titulo) {
+        this.titulo = titulo;
     }
 
     public Materia getMateria() {
@@ -19,4 +27,6 @@ public class Assunto {
     public void setMateria(Materia materia) {
         this.materia = materia;
     }
+
+
 }

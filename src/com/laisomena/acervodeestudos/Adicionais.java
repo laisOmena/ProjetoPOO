@@ -1,8 +1,11 @@
 package com.laisomena.acervodeestudos;
 
 public class Adicionais {
+    private String codigo;
+    private String tipo; //livro f�sico, pdf, videoaula, flashcards, mapa mental, sites
+    private Materia materia;
     private String nome;
-    private Assunto assunto;
+    private String fonte; //autor
     private String link;
     private String imagem;
 
@@ -28,5 +31,21 @@ public class Adicionais {
 
     public void setImagem(String imagem) {
         this.imagem = imagem;
+    }
+
+    public String getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(String codigo) {
+        this.codigo = codigo;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
 }
