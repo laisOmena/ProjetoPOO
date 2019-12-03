@@ -1,4 +1,4 @@
-import com.laisomena.acervodeestudos.Assunto;
+package com.laisomena.acervodeestudos;
 
 import java.util.ArrayList;
 
@@ -9,12 +9,13 @@ public class Materia {
     private ArrayList<Assunto> listaAssuntos;
 
     public Materia() {
-        listaAssuntos = new ArrayList();
+
     }
 
     public Materia(int codigo, String nome, String sigla) {
         this.codigo = codigo;
         this.nome = nome;
+        this.sigla = sigla;
         listaAssuntos = new ArrayList();
     }
 
