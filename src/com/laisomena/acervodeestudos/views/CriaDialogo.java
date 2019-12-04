@@ -1,6 +1,5 @@
 package com.laisomena.acervodeestudos.views;
 
-import com.laisomena.acervodeestudos.model.AcervoDeEstudos;
 import com.laisomena.acervodeestudos.model.Usuario;
 import com.laisomena.acervodeestudos.model.Assunto;
 import com.laisomena.acervodeestudos.model.Materia;
@@ -22,13 +21,15 @@ public class CriaDialogo {
         CriaDialogo.listaMaterias = new ArrayList<Materia>();
         CriaDialogo.listaAssuntos = new ArrayList<Assunto>();
 
-
         String user = "";
         String password = "";
 
+        String a = "admin";
+        String b = "kaka";
+
         Usuario usuarioMock = new Usuario();
-        usuarioMock.setEmail("admin");
-        usuarioMock.setSenha("kaka");
+        usuarioMock.setEmail(a);
+        usuarioMock.setSenha(b);
 
         do {
             //JOptionPane.showMessageDialog(null, "Começando o login...");
@@ -145,25 +146,44 @@ public class CriaDialogo {
             } else {
                 //SEGUNDA TELA opcoes para o usu�rio ''unico
                 Object[] opcoes2 = {"Editar", "Visualizar", "Voltar"};
+
                 opcao = JOptionPane.showOptionDialog(null, "Escolha uma opcao:", "Acervo de Estudos -- USUARIO",
                         JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.WARNING_MESSAGE, null, opcoes2, null);
 
                 //se EDITAR foi escolhido
-                //if (opcao == JOptionPane.YES_OPTION) {
-                //String nomeAssunto = (String)JOptionPane.showInputDialog(null, "Digite o nome do assunto:", "Assunto --- CADASTRO",
-                //JOptionPane.QUESTION_MESSAGE, null, null, null);
-                //}
+                if (opcao == JOptionPane.YES_OPTION){
 
-                //se VISUALIZAR foi escolhido
-                //} else {
-                //JOptionPane.showMessageDialog(null, lista);
+                    String novoUsuario = (String) JOptionPane.showInputDialog(null, "Digite o novo login:", "MENU USUARIO --- Alterar login",
+                            JOptionPane.QUESTION_MESSAGE, null, null, null);
+
+                    if (novoUsuario == null) {
+                        System.exit(0);
+                    }
+                    String novaPassword = (String) JOptionPane.showInputDialog(null, "Digite sua senha:", "MENU USUARIO  |  Alterar senha",
+                            JOptionPane.QUESTION_MESSAGE, null, null, null);
+                    if (novaPassword == null) {
+                        System.exit(0);
+                    }
+
+                    JOptionPane.showMessageDialog(null, "Faça login novamente!");
+                    opcao = -1;
+                    //tentar fazer chamar a funçao login
+
+
+                            //se VISUALIZAR foi escolhido
+                    } else if (opcao == JOptionPane.NO_OPTION) {
+                        JOptionPane.showMessageDialog(null, usuarioMock.toString());
+
+                        //Se VOLTAR foi escolhido
+                    } else {
+                        continue;
+                    }
+
+
+                    }
+            
+
+                }while (opcao != -1) ;
 
             }
-
-
-        } while (opcao != -1);
-
     }
-
-
-}
