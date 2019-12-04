@@ -28,5 +28,11 @@ public class Assunto {
         this.materia = materia;
     }
 
-
+    @Override
+    public String toString() {
+        return "Assunto{" +
+                "titulo='" + titulo + '\'' +
+                ", materia=" + materia +
+                '}';
+    }
 }

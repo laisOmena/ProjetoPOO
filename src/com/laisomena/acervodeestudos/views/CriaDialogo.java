@@ -1,6 +1,7 @@
 package com.laisomena.acervodeestudos.views;
 
-import com.laisomena.acervodeestudos.controller.Usuario;
+import com.laisomena.acervodeestudos.model.AcervoDeEstudos;
+import com.laisomena.acervodeestudos.model.Usuario;
 import com.laisomena.acervodeestudos.model.Assunto;
 import com.laisomena.acervodeestudos.model.Materia;
 
@@ -122,7 +123,7 @@ public class CriaDialogo {
                 } else if (opcao == JOptionPane.NO_OPTION) {
                     //String lista = "";
                     for (Assunto m : CriaDialogo.listaAssuntos) {
-                        lista = lista + m + "\n";
+                        lista = lista + m.getTitulo() + "\n";
                     }
                     JOptionPane.showMessageDialog(null, lista);
 

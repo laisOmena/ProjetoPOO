@@ -1,6 +1,6 @@
 package com.laisomena.acervodeestudos.views;
 
-import com.laisomena.acervodeestudos.controller.Usuario;
+import com.laisomena.acervodeestudos.model.Usuario;
 
 import javax.swing.*;
 

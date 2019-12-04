@@ -1,6 +1,4 @@
-package com.laisomena.acervodeestudos.controller;
-
-import com.laisomena.acervodeestudos.model.Pessoa;
+package com.laisomena.acervodeestudos.model;
 
 public class Usuario extends Pessoa {
     private String senha;
@@ -18,7 +16,7 @@ public class Usuario extends Pessoa {
     }
 
     public String logar(String email, String senha) {
-        if (this.email == email & this.senha == senha) {
+        if (this.email.equals(email) & this.senha.equals(senha)) {
             return " ";
         } else {
             return "Email ou senha incorreto, tente novamente!";
