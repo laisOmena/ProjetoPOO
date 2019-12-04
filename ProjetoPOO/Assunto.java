@@ -1,14 +1,12 @@
-package com.laisomena.acervodeestudos;
-
 public class Assunto {
     private String titulo;
     private Materia materia;
-
+    
     public Assunto (String titulo, Materia materia) {
-        this.titulo = titulo;
-        this.setMateria(materia);
+    	this.titulo = titulo;
+    	this.setMateria(materia);
     }
-
+    
     public Assunto () {
     }
 
@@ -20,13 +18,17 @@ public class Assunto {
         this.titulo = titulo;
     }
 
-    public Materia getMateria() {
-        return materia;
-    }
+	public Materia getMateria() {
+		return materia;
+	}
 
-    public void setMateria(Materia materia) {
-        this.materia = materia;
-    }
-
-
+	public void setMateria(Materia materia) {
+		this.materia = materia;
+	}
+	
+	public String toString() {
+		return this.titulo;
+	}
+    
+    
 }

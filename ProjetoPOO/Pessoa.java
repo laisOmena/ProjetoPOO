@@ -1,12 +1,12 @@
-package com.laisomena.acervodeestudos;
 
-public abstract class Pessoa {
+public class Pessoa {	//para o teste tirei o abstract de pessoa
+	private long id;
     private String nome;
     private String dataNasc;
     private String sexo;
     private int cpf;
-    protected String email;
-
+    private String email;
+    
     public Pessoa(String nome, String dataNasc, String sexo, int cpf, String email) {
         this.nome = nome;
         this.setDataNasc(dataNasc);
@@ -14,8 +14,8 @@ public abstract class Pessoa {
         this.cpf = cpf;
         this.email = email;
     }
-
-    public Pessoa() {
+    
+    public Pessoa() {    	
     }
 
     public String getNome() {
@@ -41,19 +41,27 @@ public abstract class Pessoa {
         this.cpf = cpf;
     }
 
-    public String getDataNasc() {
-        return dataNasc;
-    }
+	public String getDataNasc() {
+		return dataNasc;
+	}
 
-    public void setDataNasc(String dataNasc) {
-        this.dataNasc = dataNasc;
-    }
+	public void setDataNasc(String dataNasc) {
+		this.dataNasc = dataNasc;
+	}
 
-    public String getSexo() {
-        return sexo;
-    }
+	public String getSexo() {
+		return sexo;
+	}
 
-    public void setSexo(String sexo) {
-        this.sexo = sexo;
-    }
+	public void setSexo(String sexo) {
+		this.sexo = sexo;
+	}
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
 }

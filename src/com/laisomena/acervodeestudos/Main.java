@@ -1,5 +1,7 @@
 package com.laisomena.acervodeestudos;
 
+import com.laisomena.acervodeestudos.controller.Usuario;
+
 public class Main {
     public static void main(String[] args) {
         Usuario a = new Usuario();

@@ -1,22 +1,27 @@
-package com.laisomena.acervodeestudos;
+package com.laisomena.acervodeestudos.model;
+
+import com.laisomena.acervodeestudos.model.Assunto;
 
 import java.util.ArrayList;
 
 public class Materia {
     private int codigo;
     private String nome;
-    private String sigla;
     private ArrayList<Assunto> listaAssuntos;
 
     public Materia() {
-
+        listaAssuntos = new ArrayList<Assunto>();
     }
 
-    public Materia(int codigo, String nome, String sigla) {
-        this.codigo = codigo;
+    public Materia(String nome) {
         this.nome = nome;
-        this.sigla = sigla;
-        listaAssuntos = new ArrayList();
+        listaAssuntos = new ArrayList<Assunto>();
+    }
+
+    public Materia(int codigo, String nome) {
+        this.setCodigo(codigo);
+        this.nome = nome;
+        listaAssuntos = new ArrayList<Assunto>();
     }
 
     public String getNome() {
@@ -38,5 +43,17 @@ public class Materia {
     public void addAssunto(Assunto A) {
         A.setMateria(this);
         listaAssuntos.add(A);
+    }
+
+    public int getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
+    }
+
+    public String toString() {
+        return this.nome;
     }
 }

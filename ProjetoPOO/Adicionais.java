@@ -1,9 +1,8 @@
-package com.laisomena.acervodeestudos;
-
 public class Adicionais {
-    private String codigo;
-    private String tipo; //livro fï¿½sico, pdf, videoaula, flashcards, mapa mental, sites
-    private Materia materia;
+
+	private String codigo; 
+	private String tipo; //livro físico, pdf, videoaula, flashcards, mapa mental, sites
+	private Materia materia;
     private String nome;
     private String fonte; //autor
     private String link;
@@ -33,19 +32,19 @@ public class Adicionais {
         this.imagem = imagem;
     }
 
-    public String getCodigo() {
-        return codigo;
-    }
+	public String getCodigo() {
+		return codigo;
+	}
 
-    public void setCodigo(String codigo) {
-        this.codigo = codigo;
-    }
+	public void setCodigo(String codigo) {
+		this.codigo = codigo;
+	}
 
-    public String getTipo() {
-        return tipo;
-    }
+	public String getTipo() {
+		return tipo;
+	}
 
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
-    }
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
+	}
 }
